@@ -2,10 +2,8 @@ FROM mhart/alpine-node:10
 
 WORKDIR /src
 
-COPY package*.json ./
+COPY package*.json index.js ./
 RUN npm i
-
-COPY . .
 
 EXPOSE 3000
 
