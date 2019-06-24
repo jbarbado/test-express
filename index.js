@@ -1,7 +1,15 @@
-const app = require('express')();
+// BASE SETUP
+// ==============================================
+var express = require('express');
+var app     = express();
+var port    = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
+// ROUTES
+// ==============================================
+app.get('/', function(req, res) {
   res.send('Viva Madrid!!!');
 });
 
-app.listen(3000, () => console.log('Server running'));
+// START THE SERVER
+// ==============================================
+app.listen(port, () => console.log('Server running'));
