@@ -2,7 +2,7 @@ FROM mhart/alpine-node:10
 
 WORKDIR /src
 
-COPY package.json .
+COPY package*.json ./
 RUN npm i
 
 COPY . .
